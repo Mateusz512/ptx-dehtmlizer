@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo 'Welcome to Mateusz Hinc (452086) demo!'
+echo
+echo 'For demo purposes:'
+echo 'URL = https://www.pap.pl/'
+echo '--verbose         = more verbose output'
+echo '--file out.txt    = the result will be in out.txt'
+echo
+echo '##### STARTING ######'
+echo
+
+chmod +x mathin.rb
+./mathin.rb "https://www.pap.pl/" -v -f "out.txt"
