@@ -37,4 +37,7 @@ puts fetchUrl('https://pl.wikipedia.org/wiki/Wikipedia:Strona_g%C5%82%C3%B3wna',
     .tryEncode(log)
     .unHTMLize(log)
     .removeEmptyLines(log)
+    .split(/(?<=[\.\?\!])/)
+    .select {|line| !line.match /^\s*$/ }
+    .map {|line| line.chomp}
 puts 'end'
